@@ -1,0 +1,22 @@
+org: janakiraman
+app: aws-node
+service: aws-node-project1
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  timeout: 3
+  environment:
+    name: dhanush
+
+functions:
+  function1:
+    handler: index.handler
+    memorySize: 128
+  function2:
+    handler: index.handler
+    timeout: 10
+    memorySize: 256
+    environment:
+      name : janakiraman
